@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TeaCommon.master.cs" Inherits="sy.TeaCommon" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div style="border:1px solid #a4b8ef; width:80%;margin:0 auto">
+           
+            <font size="5" color=#4D2600>&nbsp;&nbsp;在线考试系统</font>
+            <div style="position:absolute;float:right;right:200px;top:15px">
+            <font style="font-size:12px;">欢迎您：</font>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>&nbsp;
+            <a href="/Login.aspx"><asp:Label ID="Label2" runat="server" Text="退出" style="font-size:12px;"></asp:Label></a>
+                </div></div>
+        <div style="width:80%;margin:0 auto">
+    <div style="border:1px solid #a4b8ef; width:15%;float:left;height:550px;">
+                        <asp:TreeView ID="TreeView1" runat="server" Width="135px" ImageSet="BulletedList" ShowExpandCollapse="False" Height="237px">
+                            <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                            <Nodes>
+                                <asp:TreeNode Text="考试管理" Value="学生管理" NavigateUrl="~/Teacher/TTest.aspx"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Teacher/TGrade.aspx" Text="查看成绩" Value="查看成绩"></asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Tahoma" Font-Size="12pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" Height="50px" />
+                            <ParentNodeStyle Font-Bold="False" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+    </div>
+        <div style="width:84%;float:right;height:550px;border:1px solid #a4b8ef">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+    </div>
+    </form>
+</body>
+</html>
